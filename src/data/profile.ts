@@ -8,7 +8,7 @@ export const profile = {
   contact: {
     phone: "082-853-5880",
     email: "aitthikon.work@gmail.com",
-    github: "https://github.com/nokhittia-dev",
+    github: "https://github.com/nokihttia-dev",
     linkedin: "https://www.linkedin.com/in/aitthikon-makdee-8700b42b6",
     portfolio: "aitthikon.work@gmail.com",
     location:

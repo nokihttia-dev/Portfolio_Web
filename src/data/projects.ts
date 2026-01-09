@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     name: "Hiwjung",
-    desc: "ระบบจองคิวเวชระเบียบออนไลน์สำหรับงานอีเวนต์ทางการแพทย์",
+    desc: "เว็บแอปพลิเคชันสำหรับแบ่งปันสูตรอาหาร",
     bullets: [
       "พัฒนา Front-end ด้วย React + Vite และจัดการสไตล์ด้วย CSS",
       "พัฒนา Back-end ด้วย Node.js + Express.js เชื่อม MongoDB",

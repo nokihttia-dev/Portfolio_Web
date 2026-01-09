@@ -6,13 +6,13 @@ export default function Education() {
   const e = profile.education;
 
   return (
-    <section id="education" className="mx-auto max-w-6xl px-6 py-14">
+    <section id="education" className="px-0 py-10 md:py-14">
       <SectionTitle kicker="background" title="การศึกษา" />
 
-      <div className="mt-8 rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+      <div className="card soft mt-8 p-6 hover-lift">
         <div className="grid grid-cols-12 items-center gap-4">
           <div className="col-span-12 md:col-span-1">
-            <div className="relative h-20 w-20 overflow-hidden rounded-full ring-1 ring-white/20">
+            <div className="relative h-20 w-20 overflow-hidden rounded-full ring-1 ring-black/10">
               <Image
                 src="/images/tulogo.png"
                 alt="avatar"
@@ -22,19 +22,24 @@ export default function Education() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-7">
-            <div className="text-xl font-semibold tracking-tight">
+            <div className="text-xl font-semibold tracking-tight text-zinc-900">
               {e.degree} • {e.university}
             </div>
-            <div className="mt-2 text-sm text-zinc-700">
+            <div className="mt-2 text-sm text-zinc-600">
               {e.faculty} • {e.major}
             </div>
           </div>
           <div className="col-span-12 md:col-span-4 md:text-right">
-            <div className="text-[11px] tracking-[0.35em] uppercase text-zinc-500">
+            <div className="section-kicker">
               graduation year
             </div>
-            <div className="mt-2 text-lg font-semibold">{e.year}</div>
+            <div className="mt-2 text-lg font-semibold text-zinc-900">{e.year}</div>
           </div>
+        </div>
+        <div className="mt-6 flex flex-wrap items-center gap-2">
+          <a href="#projects" className="btn btn-outline focus-ring">
+            Academic Projects
+          </a>
         </div>
       </div>
     </section>

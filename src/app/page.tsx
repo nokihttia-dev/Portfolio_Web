@@ -7,13 +7,17 @@ import FooterContact from "@/components/sections/FooterContact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-zinc-950">
-      <HeroEditorial />
-      <Experience />
-      <Projects />
-      <Education />
-      <Skills />
-      <FooterContact />
+    <main className="min-h-screen px-4 py-10 text-zinc-900 md:px-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="dashboard-shell">
+          <HeroEditorial />
+          <Experience />
+          <Projects />
+          <Education />
+          <Skills />
+          <FooterContact />
+        </div>
+      </div>
     </main>
   );
 }

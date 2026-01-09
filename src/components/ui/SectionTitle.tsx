@@ -8,14 +8,12 @@ export function SectionTitle({
   right?: React.ReactNode;
 }) {
   return (
-    <div className="flex items-end justify-between gap-4">
+    <div className="flex flex-wrap items-end justify-between gap-4">
       <div>
-        {kicker ? (
-          <div className="text-[11px] tracking-[0.35em] uppercase text-zinc-500">
-            {kicker}
-          </div>
-        ) : null}
-        <h2 className="mt-2 text-2xl font-semibold tracking-tight">{title}</h2>
+        {kicker ? <div className="section-kicker">{kicker}</div> : null}
+        <h2 className="mt-3 text-2xl font-semibold tracking-tight text-zinc-900 md:text-3xl">
+          {title}
+        </h2>
       </div>
       {right}
     </div>

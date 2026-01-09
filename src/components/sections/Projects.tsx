@@ -1,18 +1,37 @@
+"use client";
+
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { projects } from "@/data/projects";
 import { SectionTitle } from "../ui/SectionTitle";
 import { Pill } from "../ui/Pill";
 
 export default function Projects() {
+  const searchParams = useSearchParams();
+  const query = (searchParams.get("q") ?? "").trim().toLowerCase();
+  const filteredProjects = query
+    ? projects.filter((project) => {
+        const haystack = [
+          project.name,
+          project.desc,
+          project.bullets.join(" "),
+          project.tech.join(" "),
+        ]
+          .join(" ")
+          .toLowerCase();
+        return haystack.includes(query);
+      })
+    : projects;
+
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-14">
+    <section id="projects" className="px-0 py-10 md:py-14">
       <SectionTitle kicker="selected" title="Projects" />
 
       <div className="mt-8 grid grid-cols-12 gap-6">
-        {projects.map((p) => (
+        {filteredProjects.map((p) => (
           <article
             key={p.name}
-            className="col-span-12 overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm md:col-span-6"
+            className="card hover-lift col-span-12 overflow-hidden md:col-span-6"
           >
             <div className="relative h-56 bg-zinc-100">
               {/* ถ้าไม่มีรูป ให้ยังแสดง block เท่ๆ แบบขาว-ดำ */}
@@ -35,7 +54,7 @@ export default function Projects() {
             <div className="p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-lg font-semibold tracking-tight">
+                  <h3 className="text-lg font-semibold tracking-tight text-zinc-900">
                     {p.name}
                   </h3>
                   <p className="mt-1 text-sm text-zinc-600">{p.desc}</p>
@@ -47,7 +66,7 @@ export default function Projects() {
                       href={p.links.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-full border border-zinc-200 px-4 py-2 text-xs font-medium hover:bg-zinc-50"
+                      className="btn btn-outline focus-ring"
                     >
                       GitHub
                     </a>
@@ -57,7 +76,7 @@ export default function Projects() {
                       href={p.links.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-full bg-zinc-950 px-4 py-2 text-xs font-medium text-white hover:bg-zinc-900"
+                      className="btn btn-primary focus-ring"
                     >
                       Live
                     </a>
@@ -65,7 +84,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-zinc-700">
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-zinc-600">
                 {p.bullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -73,7 +92,7 @@ export default function Projects() {
 
               <div className="mt-5 flex flex-wrap gap-2">
                 {p.tech.map((t) => (
-                  <Pill key={t} className="bg-zinc-50">
+                  <Pill key={t} className="bg-zinc-100 text-zinc-700">
                     {t}
                   </Pill>
                 ))}
@@ -81,6 +100,11 @@ export default function Projects() {
             </div>
           </article>
         ))}
+        {filteredProjects.length === 0 ? (
+          <div className="col-span-12 rounded-2xl border border-zinc-200 bg-zinc-50 px-6 py-5 text-sm text-zinc-600">
+            No projects matched your search.
+          </div>
+        ) : null}
       </div>
     </section>
   );

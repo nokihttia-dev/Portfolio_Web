@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: "ฝึกงานที่ บริษัท G-Able",
     period: "กันยายน 2568 - ธันวาคม 2568",
-    highlight: "พัฒนาเว็บแอปพลิเคชันประกันภัย",
+    highlight: "มีส่วนร่วมในการพัฒนาเว็บแอปพลิเคชันด้านประกันภัยระดับองค์กรสำหรับบริษัทประกันภัยรายใหญ่",
     bullets: [
       "ปรับปรุง Front-end (Angular 14) และ Back-end ด้วย Java Spring Boot",
       "พัฒนารายงาน JasperReports (PDF/Excel) ในรูปแบบโครงสร้างตารางสำหรับหน่วยงาน",
@@ -13,7 +13,7 @@ export const experiences = [
   {
     title: "ฝึกงานที่ บริษัท APTx",
     period: "มิถุนายน 2568 - กรกฎาคม 2568",
-    highlight: "ERP APTx",
+    highlight: "พัฒนาเว็บแอปพลิเคชันสำหรับบริหารจัดการทรัพยากรขององค์กร (ERP)",
     bullets: [
       "ออกแบบโครงสร้างฐานข้อมูล และพัฒนา RESTful API ด้วย FastAPI",
       "ใช้ PostgreSQL ในการจัดเก็บและจัดการข้อมูลระบบ",
