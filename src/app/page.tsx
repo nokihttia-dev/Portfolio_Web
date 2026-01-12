@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import HeroEditorial from "@/components/sections/HeroEditorial";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
@@ -10,12 +11,14 @@ export default function Home() {
     <main className="min-h-screen px-4 py-8 text-zinc-900 sm:py-10 md:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="dashboard-shell">
-          <HeroEditorial />
-          <Experience />
-          <Projects />
-          <Education />
-          <Skills />
-          <FooterContact />
+          <Suspense fallback={null}>
+            <HeroEditorial />
+            <Experience />
+            <Projects />
+            <Education />
+            <Skills />
+            <FooterContact />
+          </Suspense>
         </div>
       </div>
     </main>
