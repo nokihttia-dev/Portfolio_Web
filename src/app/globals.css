@@ -14,6 +14,7 @@ html, body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-thai), var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 /* subtle grain */
@@ -242,6 +243,46 @@ body::before {
 .focus-ring:focus-visible {
   outline: 2px solid rgba(0, 0, 0, 0.8);
   outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .dashboard-shell {
+    border-radius: 20px;
+    padding: 14px;
+  }
+
+  .card {
+    border-radius: 18px;
+  }
+
+  .btn {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+  }
+
+  .chip {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+  }
+
+  .search-input {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .section-kicker {
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+  }
+
+  .nav-icon,
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 768px) {

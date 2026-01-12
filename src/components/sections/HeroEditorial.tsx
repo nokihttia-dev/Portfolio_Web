@@ -63,8 +63,8 @@ export default function HeroEditorial() {
   };
 
   return (
-    <section id="home" className="pb-10">
-      <div className="flex flex-wrap items-center justify-between gap-4">
+    <section id="home" className="pb-8 sm:pb-10">
+      <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3">
             <div className="text-2xl font-semibold"></div>
             <div className="flex items-center gap-2">
@@ -74,7 +74,7 @@ export default function HeroEditorial() {
           </div>
 
           <form
-            className="flex flex-1 flex-wrap items-center justify-end gap-3"
+            className="flex w-full flex-wrap items-center justify-end gap-2 sm:w-auto sm:flex-1 sm:gap-3"
             role="search"
             onSubmit={handleSearchSubmit}
           >
@@ -86,13 +86,13 @@ export default function HeroEditorial() {
               aria-label="Search"
               defaultValue={searchParams.get("q") ?? ""}
             />
-            <button type="submit" className="btn btn-primary focus-ring">
+            <button type="submit" className="btn btn-primary focus-ring w-full sm:w-auto">
               Search
             </button>
           </form>
       </div>
 
-      <div className="mt-8 grid grid-cols-12 gap-6">
+      <div className="mt-6 sm:mt-8 grid grid-cols-12 gap-4 sm:gap-6">
           <aside className="col-span-12 hidden md:col-span-1 md:flex">
             <div className="nav-rail flex w-full flex-col items-center gap-3">
               <a className="nav-icon active" href="#home" aria-label="Home">
@@ -138,12 +138,12 @@ export default function HeroEditorial() {
             </div>
           </aside>
 
-          <div className="col-span-12 space-y-6 md:col-span-7">
-            <div className="card p-6 hover-lift">
+          <div className="col-span-12 space-y-4 sm:space-y-6 md:col-span-7">
+            <div className="card p-4 sm:p-6 hover-lift">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <div className="section-kicker">Recent Collections</div>
-                  <div className="mt-2 text-xl font-semibold text-zinc-900">
+                  <div className="mt-2 text-lg sm:text-xl font-semibold text-zinc-900">
                     Featured Projects
                   </div>
                 </div>
@@ -165,9 +165,9 @@ export default function HeroEditorial() {
                 {topProjects.map((project) => (
                   <article
                     key={project.name}
-                    className="card soft min-w-55 p-4 hover-lift"
+                    className="card soft min-w-[12.5rem] sm:min-w-[13.75rem] p-3 sm:p-4 hover-lift"
                   >
-                    <div className="relative h-28 overflow-hidden rounded-2xl bg-zinc-100">
+                    <div className="relative h-24 sm:h-28 overflow-hidden rounded-2xl bg-zinc-100">
                       {project.image ? (
                         <Image
                           src={project.image}
@@ -177,7 +177,7 @@ export default function HeroEditorial() {
                         />
                       ) : null}
                     </div>
-                    <div className="mt-4 text-sm font-semibold text-zinc-900">
+                    <div className="mt-3 sm:mt-4 text-sm font-semibold text-zinc-900">
                       {project.name}
                     </div>
                     <div className="mt-1 text-xs text-zinc-600">
@@ -188,7 +188,7 @@ export default function HeroEditorial() {
               </div>
             </div>
 
-            <div className="card p-6 hover-lift">
+            <div className="card p-4 sm:p-6 hover-lift">
               <div className="flex items-center justify-between gap-4">
                 <div className="section-kicker">History</div>
                 <a href="#experience" className="btn btn-ghost focus-ring">
@@ -196,11 +196,11 @@ export default function HeroEditorial() {
                 </a>
               </div>
 
-              <div className="mt-5 grid gap-3 text-sm">
+              <div className="mt-4 sm:mt-5 grid gap-3 text-xs sm:text-sm">
                 {recentActivity.map((item) => (
                   <div
                     key={item.title}
-                    className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3"
+                    className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-zinc-200 bg-zinc-50 px-3 py-2.5 sm:px-4 sm:py-3"
                   >
                     <div className="font-medium text-zinc-900">{item.title}</div>
                     <div className="text-xs uppercase tracking-[0.25em] text-zinc-500">
@@ -214,14 +214,14 @@ export default function HeroEditorial() {
           </div>
 
           <div className="col-span-12 md:col-span-4">
-            <div className="card light p-6 hover-lift">
+            <div className="card light p-4 sm:p-6 hover-lift">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div>
-                    <div className="text-xl font-semibold text-zinc-900">
+                    <div className="text-lg sm:text-xl font-semibold text-zinc-900">
                       {profile.nameTH}
                     </div>
-                    <div className="text-sm text-zinc-600">
+                    <div className="text-xs sm:text-sm text-zinc-600">
                       {profile.role}
                     </div>
                   </div>
@@ -232,21 +232,21 @@ export default function HeroEditorial() {
               </div>
 
               <div className="mt-6 frame-photo">
-                <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden rounded-[20px] bg-zinc-100">
+                <div className="relative h-48 sm:h-56 md:h-72 lg:h-96 overflow-hidden rounded-[20px] bg-zinc-100">
                   <Image
                     src="/images/CV_AITTHIKON (2).png"
                     alt="featured"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               </div>
 
-              <div className="mt-6 text-xl font-semibold text-zinc-900">
+              <div className="mt-6 text-lg sm:text-xl font-semibold text-zinc-900">
               Contact
               </div>
-              <div className="text-sm text-zinc-500">aitthikon.work@gmail.com</div>
-              <div className="text-sm text-zinc-500">082-853-5880</div>
+              <div className="text-xs sm:text-sm text-zinc-500 break-all">aitthikon.work@gmail.com</div>
+              <div className="text-xs sm:text-sm text-zinc-500">082-853-5880</div>
 
               <div className="mt-5 flex flex-wrap items-center gap-2">
                 <a className="btn btn-outline focus-ring" href={profile.contact.github} target="_blank" rel="noreferrer">

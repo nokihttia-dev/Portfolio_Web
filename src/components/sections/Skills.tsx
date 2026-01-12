@@ -23,21 +23,21 @@ export default function Skills() {
     : skills.soft;
 
   return (
-    <section id="skills" className="px-0 py-10 md:py-14">
+    <section id="skills" className="px-0 py-8 sm:py-10 md:py-14">
       <SectionTitle kicker="stack" title="Skills" />
 
-      <div className="mt-8 grid grid-cols-12 gap-6">
+      <div className="mt-6 sm:mt-8 grid grid-cols-12 gap-4 sm:gap-6">
         <div className="col-span-12 md:col-span-7">
-          <div className="card p-6 hover-lift">
+          <div className="card p-4 sm:p-6 hover-lift">
             <div className="section-kicker">
               technical
             </div>
 
-            <div className="mt-5 space-y-5">
+            <div className="mt-4 sm:mt-5 space-y-4 sm:space-y-5">
               {technicalGroups.map((g) => (
                 <div key={g.label}>
-                  <div className="text-sm font-semibold text-zinc-900">{g.label}</div>
-                  <div className="mt-2 text-sm text-zinc-600">
+                  <div className="text-xs sm:text-sm font-semibold text-zinc-900">{g.label}</div>
+                  <div className="mt-2 text-xs sm:text-sm text-zinc-600">
                     {g.items.join(" • ")}
                   </div>
                 </div>
@@ -52,12 +52,12 @@ export default function Skills() {
         </div>
 
         <div className="col-span-12 md:col-span-5">
-          <div className="card soft p-6 hover-lift">
+          <div className="card soft p-4 sm:p-6 hover-lift">
             <div className="section-kicker">
               soft skills
             </div>
 
-            <ul className="mt-5 list-disc space-y-2 pl-5 text-sm text-zinc-600">
+            <ul className="mt-4 sm:mt-5 list-disc space-y-1.5 sm:space-y-2 pl-4 sm:pl-5 text-xs sm:text-sm text-zinc-600">
               {softSkills.map((s) => (
                 <li key={s}>{s}</li>
               ))}
