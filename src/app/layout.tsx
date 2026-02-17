@@ -1,22 +1,27 @@
-import type { Metadata } from "next";
+import { Inter, Roboto_Mono } from 'next/font/google';
 import "./globals.css";
-import { Inter, Noto_Sans_Thai } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const notoThai = Noto_Sans_Thai({ subsets: ["thai"], variable: "--font-thai" });
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
-export const metadata: Metadata = {
-  title: "Aitthikon Makdee | Web Developer",
-  description:
-    "Portfolio of Aitthikon Makdee (Web Developer) - Experience, Projects, Skills, and Contact.",
+const robotoMono = Roboto_Mono({ 
+  subsets: ['latin'],
+  variable: '--font-roboto-mono',
+  display: 'swap',
+});
+
+export const metadata = {
+  title: 'DEV_PORTFOLIO | System Online',
+  description: 'Full Stack Developer Portfolio',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="th">
-      <body className={`${inter.variable} ${notoThai.variable} antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${robotoMono.variable} bg-neutral-950 text-white antialiased`}>
         {children}
       </body>
     </html>
