@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+# `> portfolio_web.exe`
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ whoami
+Aitthikon Makdee | Full-Stack Developer
+
+$ system.status
+ONLINE
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19-0b0f17?style=for-the-badge&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4-0b0f17?style=for-the-badge&logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-UI_Animation-0b0f17?style=for-the-badge)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Cyber/terminal-inspired portfolio built with Next.js App Router.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## `01 // Features`
 
-To learn more about Next.js, take a look at the following resources:
+- Terminal-style UI sections
+- Floating live-system panel in Hero
+- Global grid + radial glow ambient background
+- Custom cursor + scroll progress bar
+- Data-driven content from one source file
+- Responsive (desktop/mobile)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## `02 // Stack`
 
-## Deploy on Vercel
+```txt
+Frontend   : Next.js 16 + React 19
+Styling    : Tailwind CSS 4
+Animation  : Framer Motion
+Icons      : Lucide React
+Language   : JavaScript / JSX
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## `03 // Project Tree`
+
+```text
+src/
+  app/
+    layout.tsx
+    page.tsx
+    globals.css
+  components/
+    sections/
+      Navbar.jsx
+      Hero.jsx
+      About.jsx
+      Projects.jsx
+      Contact.jsx
+    ui/
+      Background.jsx
+      CustomCursor.jsx
+      GlitchText.jsx
+      SectionHeader.jsx
+  data/
+    content.js
+```
+
+---
+
+## `04 // Run Locally`
+
+```bash
+# install
+npm install
+
+# dev
+npm run dev
+
+# build + prod
+npm run build
+npm run start
+```
+
+Open: `http://localhost:3000`
+
+---
+
+## `05 // Edit Portfolio Data`
+
+Single source of truth:
+
+`src/data/content.js`
+
+Update these blocks:
+
+- `meta`
+- `profile`
+- `skills`
+- `projects`
+- `socials`
+
+---
+
+## `06 // NPM Scripts`
+
+```bash
+npm run dev    # start dev server
+npm run build  # production build
+npm run start  # run production
+npm run lint   # eslint
+```
+
+---
+
+## `07 // Visual Control Points`
+
+- `src/components/ui/Background.jsx` -> ambient grid/glow
+- `src/components/sections/Hero.jsx` -> live system panel
+- `src/app/globals.css` -> global theme styles
+
+---
+
+```bash
+$ echo "Ready for deployment."
+Ready for deployment.
+```
+
