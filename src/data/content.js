@@ -7,16 +7,31 @@ export const PORTFOLIO_CONTENT = {
   profile: {
     name: "AITTHIKON MAKDEE",
     role: "Full Stack Developer",
-    description: "สร้างสรรค์ประสบการณ์ดิจิทัลที่ผสมผสานระหว่างงานศิลปะและวิศวกรรมคอมพิวเตอร์...",
+    description: "I am a Full-Stack Web Developer with a strong interest in building enterprise-level web applications and well-structured systems. I have experience working on both Front-end and Back-end development, from database design and RESTful API development to creating practical and user-friendly UX/UI solutions.",
     location: "Bangkok, Thailand (UTC+7)",
-    experience: "1 Years Experience",
+    experience: "0-1 Years Experience",
     education: "B.Sc. Computer Science"
   },
-  skills: [
-    { name: "React / Next.js", level: 95 },
-    { name: "TypeScript", level: 90 },
-    // ... items อื่นๆ
-  ],
+skills: [
+  { category: "Languages", name: "JavaScript" },
+  { category: "Languages", name: "Java" },
+
+  { category: "Front-end", name: "React" },
+  { category: "Front-end", name: "Next.js" },
+  { category: "Front-end", name: "Angular" },
+  { category: "Front-end", name: "Tailwind CSS" },
+
+  { category: "Back-end", name: "Node.js" },
+  { category: "Back-end", name: "Express.js" },
+  { category: "Back-end", name: "Spring Boot" },
+  { category: "Back-end", name: "FastAPI" },
+
+  { category: "Database", name: "PostgreSQL" },
+  { category: "Database", name: "MongoDB" },
+
+  { category: "Tools", name: "Git" },
+  { category: "Tools", name: "Docker" }
+],
   projects: [
     {
       id: "01",

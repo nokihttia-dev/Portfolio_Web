@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap } from 'lucide-react';
 import { PORTFOLIO_CONTENT } from '@/data/content';
 import SectionHeader from '@/components/ui/SectionHeader';
 
@@ -33,31 +32,22 @@ export default function AboutSection() {
             </div>
           </div>
           
-          {/* Right Column: Skills Graph */}
-          <div className="bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-sm">
-            <h3 className="font-mono text-green-500 mb-6 flex items-center gap-2">
-              <Zap size={16} /> SKILL_SET_ANALYSIS
-            </h3>
-            <div className="space-y-6">
-              {PORTFOLIO_CONTENT.skills.map((skill, index) => (
-                <div key={index}>
-                  <div className="flex justify-between text-xs font-mono mb-2 text-gray-400">
-                    <span>{skill.name}</span>
-                    <span>{skill.level}%</span>
+
+              <div className="font-mono text-sm space-y-2 p-4 bg-black/40 rounded border border-white/5">
+                <p className="text-green-500/70 mb-4">$ system.get_capabilities()</p>
+                {PORTFOLIO_CONTENT.skills.map((skill, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-green-500">✓</span>
+                    <span className="text-gray-500">[{skill.category}]</span>
+                    <span className="text-gray-200">{skill.name}</span>
                   </div>
-                  <div className="w-full h-1 bg-gray-800 rounded-full overflow-hidden">
-                    <motion.div 
-                      className="h-full bg-white" 
-                      initial={{ width: 0 }} 
-                      whileInView={{ width: `${skill.level}%` }} 
-                      transition={{ duration: 1, delay: 0.1 + (index * 0.1) }} 
-                      viewport={{ once: true }} 
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                ))}
+                <motion.span 
+                  animate={{ opacity: [1, 0] }} 
+                  transition={{ repeat: Infinity, duration: 0.8 }}
+                  className="inline-block w-2 h-4 bg-green-500"
+                />
+              </div>
         </div>
       </div>
     </section>
