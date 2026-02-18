@@ -7,8 +7,13 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-32 px-6 md:px-20 bg-black border-t border-white/10">
-      <div className="container mx-auto max-w-6xl">
+    <section id="projects" className="py-32 px-6 md:px-20 border-t border-white/5 relative overflow-hidden">
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <p className="font-mono text-xs text-green-500/70 mb-4">$ projects.scan() :: deployment logs indexed</p>
+        <p className="font-mono text-xs md:text-sm text-gray-400 mb-10">
+          &gt; Terminal: Compiling selected builds and production outcomes
+          <span className="animate-pulse text-green-400"> _</span>
+        </p>
         <SectionHeader title="Selected Works" subtitle="deployment_logs" />
         
         <div className="flex flex-col gap-20">

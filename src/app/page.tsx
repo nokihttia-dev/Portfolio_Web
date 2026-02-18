@@ -19,7 +19,7 @@ export default function Home() {
   });
 
   return (
-    <main className="bg-neutral-950 min-h-screen text-white overflow-x-hidden font-sans">
+    <main className="relative min-h-screen text-white overflow-x-hidden font-sans">
       <CustomCursor />
       <GridBackground />
       
@@ -28,14 +28,16 @@ export default function Home() {
         className="fixed top-0 left-0 right-0 h-1 bg-green-500 origin-left z-50 mix-blend-screen" 
         style={{ scaleX }} 
       />
-      
-      <Navbar />
-      
-      {/* Sections */}
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <ContactSection />
+
+      <div className="relative z-10">
+        <Navbar />
+        
+        {/* Sections */}
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
+      </div>
     </main>
   );
 }

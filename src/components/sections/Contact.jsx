@@ -12,14 +12,8 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-40 px-6 md:px-20 min-h-[80vh] flex flex-col justify-center overflow-hidden bg-black border-t border-white/10"
+      className="relative py-40 px-6 md:px-20 min-h-[80vh] flex flex-col justify-center overflow-hidden border-t border-white/5"
     >
-      {/* Background Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,100,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,100,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
-
-      {/* Radial Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,100,0.15),transparent_60%)]" />
-
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -27,6 +21,8 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+          <p className="font-mono text-xs text-green-500/70 mb-4">$ contact.listen() :: inbound channel active</p>
+
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 border border-green-500/30 bg-green-500/10 text-green-400 px-6 py-2 rounded-full mb-10 font-mono text-xs tracking-widest">
             <span className="animate-pulse w-2 h-2 bg-green-400 rounded-full" />

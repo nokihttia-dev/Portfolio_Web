@@ -20,7 +20,7 @@ export default function Navbar() {
           {PORTFOLIO_CONTENT.meta.title}
         </div>
         
-        <div className="hidden md:flex gap-8 font-mono text-xs tracking-wider text-gray-400">
+        <div className="hidden md:flex gap-8 font-mono text-xs tracking-wider text-green-500">
           {['About', 'Projects', 'Contact'].map((item) => (
             <a 
               key={item} 

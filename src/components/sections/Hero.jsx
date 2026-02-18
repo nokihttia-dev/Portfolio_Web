@@ -7,13 +7,19 @@ import GlitchText from '@/components/ui/GlitchText';
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-20 relative pt-20">
+    <section className="min-h-screen flex flex-col justify-center px-6 md:px-20 relative pt-20 overflow-hidden border-t border-white/5">
       <div className="container mx-auto max-w-6xl z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8 }}
         >
+          <p className="font-mono text-xs text-green-500/70 mb-4">$ hero.init() :: system boot sequence complete</p>
+          <p className="font-mono text-xs md:text-sm text-gray-400 mb-8">
+            &gt; Terminal: Rendering portfolio experience
+            <span className="animate-pulse text-green-400"> _</span>
+          </p>
+
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/20 bg-green-500/5 text-green-500 font-mono text-xs mb-8">
             <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />

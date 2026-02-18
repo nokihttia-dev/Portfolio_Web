@@ -6,8 +6,13 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 px-6 md:px-20 relative border-t border-white/5">
-      <div className="container mx-auto max-w-6xl">
+    <section id="about" className="py-32 px-6 md:px-20 relative border-t border-white/5 overflow-hidden">
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <p className="font-mono text-xs text-green-500/70 mb-4">$ about.sync() :: profile context loaded</p>
+        <p className="font-mono text-xs md:text-sm text-gray-400 mb-10">
+          &gt; Terminal: Enumerating core specs and engineering capabilities
+          <span className="animate-pulse text-green-400"> _</span>
+        </p>
         <SectionHeader title="About" subtitle="core_specs" />
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
